@@ -15,7 +15,7 @@
 
 		var wrapper = typeof selector === 'string' ? document.querySelector(selector) : selector;
 		var dropdown = wrapper.querySelector('.selections-dropdown');
-		var selectionsWrapper = wrapper.querySelector('.selections');
+		var tagsWrapper = wrapper.querySelector('.selections');
 		var input = wrapper.querySelector('input');
 		var toggler = wrapper.querySelector('.toggler');
 		var placeholder = params.placeholder || '';
@@ -24,7 +24,7 @@
 
 		// Paste placeholder
 		if (placeholder && input.value === '') {
-			selectionsWrapper.textContent = placeholder;
+			tagsWrapper.textContent = placeholder;
 		}
 
 		// Add items
@@ -35,7 +35,7 @@
 			var inputValues = [];
 
 			if (input.value === '') {
-				selectionsWrapper.innerHTML = '';
+				tagsWrapper.innerHTML = '';
 			}
 
     		while (item !== null && item.className !== 'item') {
@@ -57,9 +57,9 @@
 
 			tag.textContent = selection.text;
 
-			selectionsWrapper.appendChild(tag);
+			tagsWrapper.appendChild(tag);
 
-			selectionsWrapper.classList.add('has-items');
+			tagsWrapper.classList.add('has-items');
 			
 			selections.push(selection);
 
@@ -74,7 +74,7 @@
 		});
 
 		// Remove items
-		selectionsWrapper.addEventListener('click', function(e) {
+		tagsWrapper.addEventListener('click', function(e) {
 
 			var tag = e.target;
 
@@ -104,8 +104,8 @@
 				input.value = inputValues;
 
 				if (input.value === '') {
-					selectionsWrapper.classList.remove('has-items');
-					selectionsWrapper.textContent = placeholder;
+					tagsWrapper.classList.remove('has-items');
+					tagsWrapper.textContent = placeholder;
 				}
 
 			}
