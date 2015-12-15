@@ -1,14 +1,14 @@
 (function (root, factory) {
-  if (typeof exports === 'object') {
-	// CommonJS
-	factory(exports);
-  } else if (typeof define === 'function' && define.amd) {
-	// AMD. Register as an anonymous module.
-	define(['exports'], factory);
-  } else {
-	// Browser globals
-	factory(root);
-  }
+	if (typeof exports === 'object') {
+		// CommonJS
+		factory(exports);
+	} else if (typeof define === 'function' && define.amd) {
+		// AMD. Register as an anonymous module.
+		define(['exports'], factory);
+	} else {
+		// Browser globals
+		factory(root);
+	}
 } (this, function (exports) {
 
 	var Multiselect = function(selector, params) {
@@ -38,9 +38,9 @@
 				tagsWrapper.innerHTML = '';
 			}
 
-    		while (item !== null && item.className !== 'item') {
-      			item = item.parentNode;
-    		}
+			while (item !== null && item.className !== 'item') {
+				item = item.parentNode;
+			}
 
 			var selection = {
 				value: item.getAttribute('data-value'),
@@ -69,7 +69,7 @@
 
 			});
 
-    		input.value = inputValues;
+			input.value = inputValues;
 
 		});
 
