@@ -68,6 +68,10 @@
 
 			input.value = inputValues;
 
+			if (!dropdown.querySelector('.item:not(.disabled)')) {
+				wrapper.classList.add('all-selected');
+			}
+
 		});
 
 		// Remove items
@@ -77,6 +81,8 @@
 
 			// Check that we clicked tag element
 			if (tag.className === 'multiselect-tag') {
+
+				wrapper.classList.remove('all-selected');
 
 				var inputValues = [];
 

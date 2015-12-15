@@ -58,6 +58,11 @@
 	outline: none;
 }
 
+.multiselect.all-selected .toggler {
+	pointer-events: none;
+	opacity: .5;
+}
+
 .multiselect .selections-dropdown {
 	background-color: #fff;
 	display: none;
