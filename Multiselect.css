@@ -1,0 +1,88 @@
+
+.multiselect {
+	display: inline-block;
+	position: relative;
+}
+
+.multiselect * {
+	box-sizing: border-box;
+}
+
+.multiselect .selections-wrapper {
+	display: flex;
+}
+
+.multiselect .selections {
+	border: 1px solid #ddd;
+	background-color: #fff;
+	padding: .5em 1em;
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	border-radius: 3px 0 0 3px;
+}
+
+.multiselect .selections.has-items {
+	padding: .2em .3em;
+}
+
+.multiselect .selections span {
+	padding: 0 .3em;
+    border: 1px solid #ddd;
+    margin: .3em;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.multiselect .toggler {
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #ddd;
+	border-radius: 0 3px 3px 0;
+	border-left: none;
+	cursor: pointer;
+}
+
+.multiselect .toggler:focus {
+	box-shadow: none;
+	outline: none;
+}
+
+.multiselect .selections-dropdown {
+	background-color: #fff;
+	display: none;
+	margin-top: .5em;
+	border: 1px solid #ddd;
+	border-bottom: none;
+	border-top: none;
+	box-shadow: 0 -1px 0 #ddd;
+	z-index: 1;
+	position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    min-width: -moz-max-content;
+    min-width: -webkit-max-content;
+    min-width: max-content;
+}
+
+.multiselect.is-open .selections-dropdown {
+	display: block;
+}
+
+.multiselect .item {
+	border-bottom: 1px solid #ddd;
+	padding: .5em;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.multiselect .item:hover {
+	background-color: #fafafa;
+}
+
+.disabled {
+	display: none;
+}
