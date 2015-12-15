@@ -19,7 +19,6 @@
 		var input = wrapper.querySelector('input');
 		var toggler = wrapper.querySelector('.toggler');
 		var placeholder = params.placeholder || '';
-
 		var selections = [];
 
 		// Paste placeholder
@@ -64,9 +63,7 @@
 			selections.push(selection);
 
 			selections.forEach(function(item, i) {
-
 				inputValues.push(item.value);
-
 			});
 
 			input.value = inputValues;
@@ -96,9 +93,7 @@
 				});
 
 				selections.forEach(function(item, i) {
-
 					inputValues.push(item.value);
-
 				});
 
 				input.value = inputValues;
@@ -133,9 +128,7 @@
 			var values = input.value.split(',');
 
 			values.forEach(function(value, i) {
-
 				dropdown.querySelector('.item:nth-child(' + value + ')').click();
-
 			});
 
 		}
